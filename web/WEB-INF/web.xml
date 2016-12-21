@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
+
+    <servlet>
+        <servlet-name>Accueil</servlet-name>
+        <servlet-class>controleur.AccueilServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Accueil</servlet-name>
+        <url-pattern>/accueil</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Admin</servlet-name>
+        <servlet-class>controleur.AdminProduitsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Admin</servlet-name>
+        <url-pattern>/admin</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Profiles</servlet-name>
+        <servlet-class>controleur.AdminProfilesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Profiles</servlet-name>
+        <url-pattern>/profiles</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Categories</servlet-name>
+        <servlet-class>controleur.AdminCategoriesServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Categories</servlet-name>
+        <url-pattern>/categories</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Utilisateurs</servlet-name>
+        <servlet-class>controleur.AdminUtilisateursServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Utilisateurs</servlet-name>
+        <url-pattern>/utilisateurs</url-pattern>
+    </servlet-mapping>
+
+
+
+    <servlet>
+        <servlet-name>Inscription</servlet-name>
+        <servlet-class>controleur.InscriptionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Inscription</servlet-name>
+        <url-pattern>/inscription</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Header</servlet-name>
+        <servlet-class>controleur.HeaderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Header</servlet-name>
+        <url-pattern>/header</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Footer</servlet-name>
+        <servlet-class>controleur.FooterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Footer</servlet-name>
+        <url-pattern>/footer</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>Menu</servlet-name>
+        <servlet-class>controleur.MenuServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Menu</servlet-name>
+        <url-pattern>/menu</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Recherche</servlet-name>
+        <servlet-class>controleur.RechercheServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Recherche</servlet-name>
+        <url-pattern>/recherche</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>GestionProduits</servlet-name>
+        <servlet-class>controleur.GestionProduitServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GestionProduits</servlet-name>
+        <url-pattern>/gestionproduit</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>connection</servlet-name>
+        <servlet-class>controleur.ConnectionServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>connection</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>Accueil.jsp</welcome-file>
+    </welcome-file-list>
+    <filter>
+        <filter-name>ObjectifyFilter</filter-name>
+        <filter-class>com.googlecode.objectify.ObjectifyFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>ObjectifyFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+</web-app>
